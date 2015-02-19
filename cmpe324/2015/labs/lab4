@@ -1,0 +1,32 @@
+team id	    in lab performance	    report performance
+------------------------------------------------------
+1	    amal		    q1. did not exit pc 
+				    q2. stops at the router
+				    q3. full path after add gateway to pc
+
+	    shaikha		    q1. did not exit pc
+				    q2. stop at switch
+				    q3. full path after add gateway to pc
+				    
+
+2	    afra		    up to 11
+	    alia
+	    leena		    question 1: good
+				    q6. reach the switch (good), but won't reach the gateway!
+				    q9. full path
+
+	
+3	    ????????????????????    tba..
+	    jamsim		    q1:	stops at switch
+				    q2: stops at router
+				    q3: full path
+
+	    mohd		    q1: stops at switch
+				    q2: stops at route
+				    q3: full path
+
+	    hamad		    q1: stops at switch, asks mac address, stops at switch
+				    question 1: reached switch
+				    q2: stops at router
+				    q3: full path
+
