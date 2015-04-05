@@ -1,0 +1,29 @@
+t   in lab performance                              report performance
+                                                 (no report for this lab)
+-------------------------------------------------------------------------
+1   all                                             
+    did not analyse.                [N/A]
+    did not craft.                  [N/A]
+                                                         
+                                                         
+2   all
+    did not analyse.                [N/A]
+    did not craft.                  [N/A]
+
+3   all:                                                 
+    q1. sender's mac address.       [CORRECT]
+    q2. reciever's gateway          [CORRECT]
+    q3. sender's gateway.           [CORRECT]
+    q4. jassim: reciever pc         [WRONG]
+        mohammad: sender's gateway  [CORRECT]
+        hamad: sender's gateway     [CORRECT]
+    q5.                             [CORRECT]
+    q6.                             [CORRECT]
+
+questions:
+q1. what is the source mac address at the sender? why?
+q2. what is the destination mac address at the receiver? why?
+q3. what is the destination mac address at the sender? why?
+q4. what is the destination mac address at the receiver? why?
+q5. observe communication over UDP of a reference implementation.
+q6. perform communication over UDP via raw sockets programming.

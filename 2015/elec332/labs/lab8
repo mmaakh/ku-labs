@@ -1,0 +1,189 @@
+TEAM ID	    ANSWERS                         CORRECTNESS
+-------------------------------------------------------
+1
+    Shamsa:
+ 	        Q0. 2                           [CORRECT]
+            Q1. power ATD0 up               [CORRECT]
+            Q2. setup ATD1<etc>             [CORRECT]
+            Q3. in 0x85, 8 is 8bit sampling,[CORRECT]
+                5 is prescaler selector.
+            Q4. 8 is 7th bit ON meaning     [CORRECT]
+                8-bits sampling (this OFF
+                means 10-bits sampling), 5
+                0b0101 on bits 0-4 for
+                prescaler selection
+            Q5. 5 in 0x85 is a prescaler of [.5 CRCT]
+                bus_clock/(f(prescaller)+1)*0.5.
+                but no idea what the
+                function f is.
+    Leena:
+ 	        Q0. 2                           [CORRECT]
+            Q1. power ATD0 up               [CORRECT]
+            Q2. setup ATD1<etc>             [CORRECT]
+            Q3. in 0x85, 8 is 8bit sampling,[.5 CRCT]
+                5 is channel (temperature).
+            Q4. 8 is 7th bit ON meaning     [CORRECT*]
+                8-bits sampling (this OFF
+                means 10-bits sampling), 5
+                0b101 on bits 0-2 for
+                channels
+            Q5. 5 in 0x85 is a prescaler of [.5 CRCT]
+                bus_clock/(f(prescaller)+1)*0.5.
+                but no idea what the
+                function f is.
+    Muna:
+ 	        Q0. 2                           [CORRECT]
+            Q1. power ATD0 up               [CORRECT]
+            Q2. setup ATD1<etc>             [CORRECT]
+            Q3. in 0x85, 8 is 8bit sampling,[CORRECT]
+                5 is prescaler selector.
+            Q4. 8 is 7th bit ON meaning     [CORRECT]
+                8-bits sampling (this OFF
+                means 10-bits sampling), 5
+                0b0101 on bits 0-4
+            Q5. 5 in 0x85 is a prescaler of [.5 CRCT]
+                bus_clock/(f(prescaller)+1)*0.5.
+                but no idea what the
+                function f is.
+
+2
+    Alya:
+ 	        Q0. 2                           [CORRECT]
+            Q1. power ATD0 up               [CORRECT]
+            Q2. setup ATD1<etc>             [CORRECT]
+            Q3. in 0x85, 8 is 8bit sampling,[CORRECT]
+                5 is prescaler selector.
+            Q4. 8 is 7th bit ON meaning     [CORRECT]
+                8-bits sampling (this OFF
+                means 10-bits sampling), 5
+                0b0101 on bits 0-4 for
+                prescaler selection
+            Q5. 5 in 0x85 is a prescaler of [.5 CRCT]
+                bus_clock/(f(prescaller)+1)*0.5.
+                but no idea what the
+                function f is.
+    Afra:
+ 	        Q0. 2                           [CORRECT]
+            Q1. power ATD0 up               [CORRECT]
+            Q2. setup ATD1<etc>             [CORRECT]
+            Q3. in 0x85, 8 is 8bit sampling,[.5 CRCT]
+                5 is channel (temperature).
+            Q4. 8 is 7th bit ON meaning     [CORRECT*]
+                8-bits sampling (this OFF
+                means 10-bits sampling), 5
+                0b101 on bits 0-2 for
+                channels
+            Q5. 5 in 0x85 is a prescaler of [.5 CRCT]
+                bus_clock/(f(prescaller)+1)*0.5.
+                but no idea what the
+                function f is.
+    Anoud:
+ 	        Q0. 2                           [CORRECT]
+            Q1. power ATD0 up               [CORRECT]
+            Q2. setup ATD1<etc>             [CORRECT]
+            Q3. in 0x85, 8 is 8bit sampling,[CORRECT]
+                5 is prescaler selector.
+            Q4. 8 is 7th bit ON meaning     [CORRECT]
+                8-bits sampling (this OFF
+                means 10-bits sampling), 5
+                0b0101 on bits 0-4
+            Q5. 5 in 0x85 is a prescaler of [.5 CRCT]
+                bus_clock/(f(prescaller)+1)*0.5.
+                but no idea what the
+                function f is.
+
+3	        100% for all members
+4	        100% for all members
+
+
+MODAL ANSWERS
+------------------------------------------------------
+Q0. How many Analog to Digital Converters (ADC) are there?
+A0. 2, ATD0 and ATD1.
+
+Q1. What is ATD0CTL2_ADPU?
+A1. A single bit that, once set, powers up the ADC0. Not to be confused with
+    ATD0CTL2 which is 8 bits that controls other aspects of the converter ADC0.
+
+Q2. How to enable the other ADC?
+A2. Same except for configuring registers that begin with "ATD1" instead of
+    "ATD0". E.g. ATD1CTL2, ATD1CTL4, etc.
+
+
+Q3. What does ATD0CTL4 = 0x85 mean?
+A3. It means these:
+    i.      ADC sample size is 8 bits (i.e. after sensor reading is quantized, its
+            stored as an 8 bit number),
+
+    ii.     Sample time length is 2, and the unit is ADC clock cycles (which in
+            this lab is 2Mhz). I.e. 1 micro second (1/(2000000/2) seconds).
+
+    iii.    5 is the prescaller specifier.
+
+
+Q4. Explain how ATD0CTL4 = 0x85 means what it means?
+A4. i.      Sample size is 8 bits when the 7th bit of ATD0CTL4 register is 1,
+            and is 10 bits when the bit is 0.
+
+    ii.     Bits 6 and 5 are the sample length specifier as follows:
+
+        bit_6   bit_7   sample_len
+        --------------------------
+        0       0       2
+        0       1       4
+        1       0       8
+        1       1       16
+
+    iii.    The prescaller specifier (prescale_specifier) is used to obtain the
+            prescaller using the equation below:
+
+        prescaller = bus_clock/(prescale_specifier + 1)*0.5
+
+Q5. What is the clock frequency of the convertor ATD0 as used in lab 8?
+A5. prescaller = bus_clock/(prescale_specifier + 1)*0.5
+               = 24000000/(5 + 1)*0.5
+               = 2000000.
+        
+Q6. What does ATD0CTL5 = 0x87 mean?
+A6.
+    Justification:
+        The variable by which the quantized values are stored in from the
+        convertor ATD0 (or ATD1, same concept, but we used ATD0) is 16 bits
+        long. But the ATD convertors can only quantize up to 10 bits. When 8
+        bit sampling is used, the other 8 bits are unused. When 10 bit sampling
+        is used, 6 bits are unused.  This leaves the question of justifying the
+        bits.
+
+        Setting ATD0CTL5's bit 7 to 1 enables right-justification, while
+        setting it to 0 enables left-justification. This affects the value.
+
+        E.g. 1: with 10 bit sampling and right-justification, a value of 682 is
+        stored as follows:
+                ---- --10 1010 1010
+            And with left-justification:
+                1010 1010 10-- ----
+
+            "-"s are set to be 0s. I marked them by "-"s for visual clarity. So:
+                ---- --10 1010 1010
+            is actually:
+                0000 0010 1010 1010
+                682 in decimal
+
+            Likewise:
+                1010 1010 10-- ----
+            is:
+                1010 1010 1000 0000
+                682 * 2^6 = 43648 in decimal
+
+    Signing:
+        Whether the numbers are signed (two's complement) or unsigned. Only
+        applicable with left-justification.
+
+    Scan mode:
+        Whether scan mode is enabled. Once the bit ATD0CTL5_SCAN is set, the
+        need to call the function ATD_CONVERT() is alleviated as the
+        microcontroller automatically updates ATD0DR0 (in this case).
+
+    Multi mode:
+        Allows sampling from multiple channels instead of just one.
+

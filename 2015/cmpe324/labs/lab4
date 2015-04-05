@@ -1,0 +1,37 @@
+t   in lab performance                              report performance
+----------------------------------------------------------------------
+1   amal:                                           tba..
+    q1. did not exit pc  [TRUE]                          
+    q2. stops at the router [TRUE]                       
+    q3. full path after add gateway to pc [TRUE]         
+                                                         
+    shaikha:                                        tba..
+    q1. did not exit pc [TRUE]                           
+    q2. stop at switch [FALSE]                           
+    q3. full path after add gateway to pc [TRUE]         
+                                                         
+                                                         
+2   all:                                            tba..
+    q1. did not exit pc  [TRUE]                          
+    q2. stops at the router [TRUE]                       
+    q3. full path after add gateway to pc [TRUE]         
+                                                    tba..
+3   all:                                                 
+    q1: stops at switch [FALSE]                          
+    q2: stops at router [TRUE]                           
+    q3: full path [TRUE]                                 
+
+correct answers:
+----------------
+q1. pc1 and pc2 are in different broadcast domains, that are interconnected by
+    multiple routers. when pc1 does not have a default gateway configured, it
+    does not send any message when told to ping pc2 (as it doesn't know the
+    next hop address to reach pc2).
+
+q2. when a default gateway is added to the pcs accordingly, their pings reaches
+    their gateways. but since they gateways do not have a route to reach the
+    ultimate destination, the routers stop there.
+
+q3. when routers are configured with routing entries to identify reachabilty
+    paths to target networks, pcs can ping each other successfully, therefore
+    the path that such packet would cross is the full path.
