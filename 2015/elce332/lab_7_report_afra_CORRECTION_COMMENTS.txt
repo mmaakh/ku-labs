@@ -1,0 +1,28 @@
+== RESULTS & ANALYSIS (45 pts) =====================
+    task 1 (45/2):
+    + correct.
+
+    task 2 (45/2):
+    + correct.
+
+== SUMMARY/CONCLUSIONS (10 pts) ====================
+    10pts.
+
+== ASSIGNMENT QUESTIONS (15 pts) ===================
+1 (15/2 pts):
+    - 0.8 correct   - PTH interrupts not enabled (e.g. PIEH).
+                    - channels swapped (i.e. instead of ch0 generating 300Hz
+                      and ch7 generating 50Hz, you made them the other way
+                      around).
+
+2 (15/2 pts):
+    - not answered.
+
+== REPORT PRESENTATION (10 pts) ====================
+10pts:
+    + coloured code.
+    + oscilloscope figures are grouped for clarity.
+    + straight to the point.
+    - some code snippets overrun the margin.
+    - bad code indentation. 
+    

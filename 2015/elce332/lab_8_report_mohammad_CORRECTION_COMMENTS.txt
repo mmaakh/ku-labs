@@ -1,0 +1,68 @@
+== RESULTS & ANALYSIS (40 pts) =====================
+    task 1 (40/3):
+    + 0.5 correct   - two major errors:
+                        * your conversion from 10-bit ATD sensor value to
+                          voltage is wrong.
+
+                        * you didn't switch to 10-bit resolution in the 2nd
+                          part of task 1.
+
+    task 2 (40/3):
+        + correct
+
+    task 3 (40/3):
+        + 0.9 correct:  - the question implies that for every
+                          distance/proximity (within some
+                          bin/interval/epsilon), there is a unique
+                          LED-blinking frequency. but your code essentially
+                          does something different:
+                            * there are multiple different
+                              distances/proximities that have the same
+                              blinking frequencies.
+
+                          why:
+                              * you are using 10-bit resolution, so 'val' is
+                                16 bits (10 of its bits are used for ATD, the
+                                rest are just 0s [the position of the 0s
+                                depend on your selection or left/right
+                                justification]).
+                              * for values in {0, 1, ..., 255}, the delay
+                                function in "lcd.c" will operate as expected.
+                              * for values beyond that, the function will
+                                overflow.
+
+                              e.g. when val = 255, delay(val) = sleep for
+                              255msec. but when val 256, delay(val) = sleep
+                              for 0msec.
+
+                          as i pointed in the lab, either:
+                              - modify the delay function to accept as input a
+                                larger variable (instead of byte). just around
+                                3 lines of code.
+                              - or use 8-bit resolution.
+
+
+== SUMMARY/CONCLUSIONS (10 pts) ====================
+    10pts.
+
+== ASSIGNMENT QUESTIONS (20 pts) ===================
+1 (20/2 pts):
+    + correct   - as you are using 10-bit resolution (and then
+                  multiplying it by 1000), clearly there is the overflow
+                  problem that is caused by using delay from "lcd.c" as i've
+                  stated earlier. but i won't deduct this again.
+
+2 (20/2 pts):
+    + 0.8 correct   - your conversion to kelvin is not exactly the correct
+                      one. change this:
+                          Kelvin = Celsius + 273
+                      to:
+                          Kelvin = Celsius + 273.15
+
+                      therefore, you should also use floats instead of ints.
+
+== REPORT PRESENTATION (10 pts) ====================
+8pts:
+    - bad code indentation. 
+    - some code snippets are blurred.
+    

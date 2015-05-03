@@ -1,0 +1,41 @@
+== RESULTS & ANALYSIS (30 pts) =====================
+    task 1 (30/3):
+    + correct
+
+    task 2 (30/3):
+    + correct   you didn't exactly follow the question, but as this is
+                a trivial aspect that doesn't affect the main task
+                [subtracting A from B], no points are deducted
+
+    task 3 (30/3):
+    + correct
+
+== SUMMARY/CONCLUSIONS (10 pts) ====================
+    10pts.
+
+== ASSIGNMENT QUESTIONS (20 pts) ===================
+    1:
+    + 0.95          
+                i like the fact that you separate two things: setting the flag
+                C, or not setting it, implying that it can be set because of a
+                previous instruction. i.e. some instructions set it to 0, some
+                set it to 1, and some just do nothing and let it have its
+                previous value (by which you put '-').
+
+                i also like that you explained why the carry bit was set. so
+                far it seems that you're the only team that explained this.
+
+                the only problem i see here is not explaining why the overflow
+                flag was set.
+
+    2:
+    + correct
+
+== REPORT PRESENTATION (10 pts) ====================
+9pts:
+    + annotated figures.
+    + the structure makes sense
+    + proper code indentation.
+    - some tables exceed the margin.
+
+    have a look at LaTeX.

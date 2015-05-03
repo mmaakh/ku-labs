@@ -1,0 +1,37 @@
+== RESULTS & ANALYSIS (30 pts) =====================
+    task 1 (30/4):
+        + correct
+
+    task 2 (30/4):
+        + 0.8 correct   missing flowchart as requested by the task.
+
+    task 3 (30/4):
+    - incorrect         you should compare X1 against 5, but what you did is
+                        comparing the constant 0 against 5.
+
+                        also, even if we fix that by replacing 0 by X1, your
+                        code is not implementing the follow chart. e.g. when
+                        X1 < 0, the code should perform the other test against
+                        -5, but your code assigns X2 = Y1 and exits.
+            
+
+    task 4 (30/4):
+        + correct
+
+== SUMMARY/CONCLUSIONS (10 pts) ====================
+    10pts.
+
+== ASSIGNMENT QUESTIONS (20 pts) ===================
+1 (20/2 pts):
+    + correct
+
+2 (20/2 pts):
+    + 0.9 correct       everything works except for storing the constant
+                        letters at 0x1050 and onwards. your code stores the
+                        vowels correctly, but only stores the last constant
+                        letter at 0x1050.
+
+== REPORT PRESENTATION (10 pts) ====================
+9pts:
+    - some figures are unreadable.
+    - a figure is put in the same line as headings.

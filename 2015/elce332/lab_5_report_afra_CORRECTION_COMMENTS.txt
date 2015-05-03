@@ -1,0 +1,63 @@
+== RESULTS & ANALYSIS (30 pts) =====================
+    task 1 (30/4):
+        + correct
+
+    task 2 (30/4):
+        + correct
+
+    task 3 (30/4):
+        + correct
+
+    task 4 (30/4):
+        + correct
+
+
+== SUMMARY/CONCLUSIONS (10 pts) ====================
+    10pts.
+
+== ASSIGNMENT QUESTIONS (20 pts) ===================
+1 (20/2 pts):
+    - incorrect lots of errors:
+                - PORTB LEDs aren't initialized.
+                - input from RS-232 aren't captured.
+                - neither stored.
+                - a single line with 'return' without a
+                terminating semi colon. code won't even
+                compile.
+
+2 (20/2 pts):
+    - incorrect     this code cannot work in most realistic string and will
+                    easily get stuck in an infinite loop:
+                        - len in SCI1_InString(char *, len) is set to 500,
+                          while the actual length of the char array (or
+                          string) is 100. this can cause buffer overflow --
+                          Undefined Behaviour (UB), one of the worst things in
+                          C.
+
+                        - word = SCI1_InString(...) is meaningless as the
+                          function returns void.
+
+                        - the while loop that is meant to count chars/spaces
+                          has logical flaws:
+                            * it can get stuck in an infinite loop.
+                            * 'len' doesn't mean anything stable. it might
+                              work in some cases, but cannot work in all
+                              cases.
+
+                            reasons:
+                            * the while loop's test variable 'sentence[count]'
+                              will only advance when sentence[count] == 0x20.
+                              what if we hit a char that is not equal to 0x20?
+                              then it will stop incrementing. and when 'count'
+                              stops incrementing, the 'while' loop will run
+                              indefinitely.
+
+                            * as the while loop is running indefinitely, 'len'
+                              gets incrementing as well. thus 'len' is not
+                              stable.
+            
+== REPORT PRESENTATION (10 pts) ====================
+8pts:
+    - some code snippets overrun the margin.
+    - bad code indentation. 
+    

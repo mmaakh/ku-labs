@@ -1,0 +1,46 @@
+== RESULTS & ANALYSIS (30 pts) =====================
+    task 1 (30/3):
+    + correct
+
+    task 2 (30/3):
+    + correct
+
+    task 3 (30/3):
+    + correct
+
+== SUMMARY/CONCLUSIONS (10 pts) ====================
+    10pts.
+
+== ASSIGNMENT QUESTIONS (20 pts) ===================
+    1:
+    + 0.9       the table shows the flags that are turned on/off, which
+                is good. but the comments section essentially contains only
+                the expanded name of the flags which doesn't add much value.
+                e.g. it is trivial to know that C stands for Carry, but how
+                does the uC defines it? similarly, it's trivial to know that V
+                stands for Overflow, but how does the uC defines it?
+                
+                the uC turns the carry flag on when either carry or borrow
+                happen to or from the most significant bit. the uC turns the
+                overflow flag on when the addition or subtraction of two
+                same-sign numbers results in another number with a different
+                sign. these might seem mildly unintuitive but it's how the uC
+                defines the flags -- a good comments section should explain
+                this aspect instead of only expanding letters of flags.
+
+                also you should have explained that the reason the carry flag
+                was set in non-add/sub instructions is because they were
+                simply not reset by the executed instructions such as LDAB.
+
+    2:
+    + correct
+
+== REPORT PRESENTATION (10 pts) ====================
+9pts:
+    + straight to the point. efficient use of space.
+    + one code snippet has proper code indentation.
+    - another code snippet doesn't
+    - LST file is a screenshot of the whole window including excess bits.
+    makes reading too hard as the font is extremely tiny.
+
+    have a look at LaTeX.

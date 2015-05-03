@@ -1,0 +1,35 @@
+== RESULTS & ANALYSIS (30 pts) =====================
+    task 1 (30/4):
+        + correct
+
+    task 2 (30/4):
+        + 0.8 correct   the table is still identical to that of task 1. with
+                        your code, the output should be different (i.e. swap
+                        20 and 10 vertically)
+    
+    task 3 (30/4):
+    - correct
+            
+
+    task 4 (30/4):
+        + correct
+
+== SUMMARY/CONCLUSIONS (10 pts) ====================
+    10pts.
+
+== ASSIGNMENT QUESTIONS (20 pts) ===================
+1 (20/2 pts):
+    + correct
+    
+2 (20/2 pts):
+    + 0.9 correct   same error as hamad's everything works except for
+                    storing the constant letters at 0x1050 and onwards.  your
+                    code stores the vowels correctly, but only stores the last
+                    constant letter at 0x1050.
+
+== REPORT PRESENTATION (10 pts) ====================
+9pts:
+    - some figures are unreadable.
+    - introduction has too much whitespace (at least the way it looks with
+      WordPad.
+    - you swapped task 2 by 1.

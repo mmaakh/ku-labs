@@ -1,0 +1,51 @@
+== RESULTS & ANALYSIS (30 pts) =====================
+    task 1 (30/3):
+    + correct
+
+    task 2 (30/3):
+    + correct   you didn't exactly follow the question, but as this is
+                a trivial aspect that doesn't affect the main task
+                [subtracting A from B], no points are deducted
+
+    task 3 (30/3):
+    + correct
+
+== SUMMARY/CONCLUSIONS (10 pts) ====================
+    10pts.
+
+== ASSIGNMENT QUESTIONS (20 pts) ===================
+    1:
+    + 0.9       the table shows the flags that are turned on/off, which
+                is good. but the comments section essentially contains only
+                the expanded name of the flags which doesn't add much value.
+                e.g. it is trivial to know that C stands for Carry, but how
+                does the uC defines it? similarly, it's trivial to know that V
+                stands for Overflow, but how does the uC defines it?
+            
+                the uC turns the carry flag on when either carry or borrow
+                happen to or from the most significant bit. the uC turns the
+                overflow flag on when the addition or subtraction of two
+                same-sign numbers results in another number with a different
+                sign. these might seem mildly unintuitive but it's how the uC
+                defines the flags -- a good comments section should explain
+                this aspect instead of only expanding letters of flags.
+
+                also the 1st row for C doesn't show the carry bit (it exists
+                as the uC didn't reset it as no relevant instruction was
+                executed).
+
+    2:
+    + correct
+
+== REPORT PRESENTATION (10 pts) ====================
+9pts:
+    + annotated figures.
+    + the structure makes sense
+    - ToC missing bookmark.
+    - improper code indentation.
+    - table caption in table instead of above/below.
+    - a code snippet is sometimes inlined with other text (e.g. page 9 followed
+    by "this").
+    - page 13, table exceeds margin borders.
+
+    have a look at LaTeX.

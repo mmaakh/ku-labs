@@ -1,0 +1,35 @@
+== RESULTS & ANALYSIS (40 pts) =====================
+    task 1 (40/4):
+    + correct.
+
+    task 2 (40/4):
+    - correct
+
+    task 3 (40/4):
+        + correct
+
+    task 4 (40/4):
+        + 0.9 correct:  sw2 doesn't stop the blinking
+
+== SUMMARY/CONCLUSIONS (10 pts) ====================
+    10pts.
+
+== ASSIGNMENT QUESTIONS (20 pts) ===================
+1 (20/2 pts):
+    + 0.8 correct:  - using sw4 and sw5 instead of sw3 and sw4 as asked.
+                    - you forgot clearning the interrupt flag for PIFH_PIFH2
+                      this causes your LED blinking process to freeze.
+                    - count down is too manual. what is expected is to let the
+                      uC count backwards. but your code requires the user to
+                      keep pressing the code for the counter to keep going
+                      backwards.
+
+2 (20/2 pts):
+    + correct
+
+== REPORT PRESENTATION (10 pts) ====================
+9.5pts:
+    - colored comments
+    - some code snippets overrun the margin.
+    - bad code indentation in assignment 1. 
+    

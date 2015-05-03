@@ -1,0 +1,48 @@
+== RESULTS & ANALYSIS (40 pts) =====================
+    task 1 (40/4):
+    + correct.
+
+    task 2 (40/4):
+    - incorrect:    your interrupt is for PTH, not IRQ. i.e. change Vporth
+                    into Virq.
+
+                    also, whenever you get that interrupt, you don't only
+                    reset the counter, but also reset the upper bound of the
+                    counter from 0x0F to 'num'.
+
+                    there are two separate things here:
+                        1. counter incrementing 1/4 Hz from 0 to 0x0F.
+                        2. counter resetting to the value of the least significant
+                        4 bits of PTH upon IRQ interrupts we call this value
+                        "num").
+
+    task 3 (40/4):
+        - incorrect:    the code given under "task 3" has nothing to do with
+                        interrupt based buzzer.
+
+    task 4 (40/4):
+        - incorrect:    the code given under "task 4" does not change the LED
+                        blinking pattern
+
+== SUMMARY/CONCLUSIONS (10 pts) ====================
+    10pts.
+
+== ASSIGNMENT QUESTIONS (20 pts) ===================
+1 (20/2 pts):
+    + 0.8 correct:  - using sw5 instead of sw3.
+                    - when counter is moving backwards (after pressing sw4),
+                      pressing sw3 will not display the current counter as the
+                      count-down is done in the interrupt itself. to make this
+                      work, you should put the count-down out of the interrupt
+                      (to allow other interrupts happen during the count-down)
+                    - infinite loop in the interrupt routine.
+
+2 (20/2 pts):
+    + correct
+
+== REPORT PRESENTATION (10 pts) ====================
+6pts:
+    + coloured code.
+    - some code snippets overrun the margin.
+    - extremely bad code indentation in assignment 1. 
+    

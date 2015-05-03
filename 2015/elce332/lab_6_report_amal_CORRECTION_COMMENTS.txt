@@ -1,0 +1,44 @@
+== RESULTS & ANALYSIS (40 pts) =====================
+    task 1 (40/4):
+    + correct.
+
+    task 2 (40/4):
+    - correct.
+
+    task 3 (40/4):
+    - correct:          the buzzer's frequency is not easily distinguishable by
+                        humans.
+
+    task 4 (40/4):
+        - 0.1 correct:  interrupt source is IRQ not PTH, thus can't react to SW2.
+
+                        doesn't work at startup (change "interrupt 6" to
+                        "interrupt 25")
+
+                        also interrupts on PTH are not enabled.
+
+                        basically your code is closer to IRQ than PTH.
+                        however, not even IRQ is enabled.
+
+== SUMMARY/CONCLUSIONS (10 pts) ====================
+    10pts.
+
+== ASSIGNMENT QUESTIONS (20 pts) ===================
+1 (20/2 pts):
+    + 0.8 correct:      - using sw5 instead of sw3.
+                        - when counter is moving backwards (after pressing
+                          sw4), pressing sw3 will not display the current
+                          counter as the count-down is done in the interrupt
+                          itself. to make this work, you should put the
+                          count-down out of the interrupt (to allow other
+                          interrupts happen during the count-down)
+                        - infinite loop in the interrupt routine.
+
+2 (20/2 pts):
+    + correct
+
+== REPORT PRESENTATION (10 pts) ====================
+8pts:
+    - bad code indentation. 
+    - too narrow column width for the code in assignment.
+    
